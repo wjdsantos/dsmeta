@@ -1,6 +1,5 @@
-import logo from '../../assets/img/logo.svg'
-
-import './styles.css'
+import logo from '../../assets/img/logo.svg';
+import './styles.css';
 
 function App() {
     return (
@@ -17,4 +16,4 @@ function App() {
     )
   }
   
-  export default App
+  export default App;
