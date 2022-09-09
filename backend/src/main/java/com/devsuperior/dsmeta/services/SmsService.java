@@ -34,14 +34,18 @@ public class SmsService {
 		
 		String date = sale.getDate().getMonthValue() + "/" + sale.getDate().getYear();
 		
+		//Essa é a versão original que funciona local mas não no Heroku
 		//String msg = "O vendedor " + sale.getSellerName() + " foi destaque em " + date
 		//		+ " com um total de R$ " + String.format("%.2f", sale.getAmount());
 		
+		//Essa versão do msg não funcionou nem local e nem no Heroku
 		//String msg = "O vendedor " + sale.getSellerName() + " foi destaque em " + date
 		//		+ " com um total de R$ " + new DecimalFormat("#,##0.00").format(sale.getAmount());
 		
+		//Essa versão funciona local mas não no Heroku
 		//String msg = String.format("O vendedor %s foi destaque em %s com um total de R$ %.2f", sale.getSellerName(), date, sale.getAmount());
 		
+		//Essa versão funcionou tanto no Heroku como local, porém não tem as casas decimais.
 		String msg = "O vendedor " + sale.getSellerName() + " foi destaque em " + date
 			    + " com um total de R$ " + String.format("%.0f", sale.getAmount());
 		
